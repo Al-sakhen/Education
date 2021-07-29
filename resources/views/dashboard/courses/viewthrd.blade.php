@@ -18,7 +18,7 @@
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive ">
-                <td><a href="{{url('/dashboard/courses/addcourse')}}" class="btn btn-default">Add</a></td>
+                <td><a href="{{url('/dashboard/courses/addcourse3')}}" class="btn btn-default">Add</a></td>
 
                 <table class="table table-hover text-wrap pt-5">
 
@@ -42,8 +42,8 @@
                     <td>{{$c->description}}</td>
                     <td><img class="w-25 image-fluid" src="{{asset('img/'. $c->image_path)}}" alt="asrfaf"></td>
                     <td>{{$c->year_id}}</td>
-                    <td><a href="{{url('/dashboard/courses/updatecourse/'. $c->id)}}" class="btn btn-default">update</a></td>
-                    <td><a href={{"delete/". $c->id}} class="btn btn-danger">delete</a></td>
+                    <td><a href="{{url('/dashboard/courses/updatecourse3/'. $c->id)}}" class="btn btn-default">update</a></td>
+                    <td><a href={{url('dashboard/delete3/'.$c->id) }} class="btn btn-danger">delete</a></td>
                     </tr>
 
                     @endforeach

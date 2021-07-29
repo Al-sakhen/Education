@@ -39,6 +39,7 @@ Route::post ('/PostInsertName', [yearsController::class, 'PostInsertName']);
 
 // Route::get ('/subject', [coursesController::class, 'subject']);
 
+
 // Admin Controller --> for courses
 Route::get ('/dashboard', [adminController::class, 'index']);
 Route::get ('/dashboard/FirstYear', [adminController::class, 'courses1']);
@@ -46,11 +47,30 @@ Route::get ('/dashboard/SecondYear', [adminController::class, 'courses2']);
 Route::get ('/dashboard/ThirdYear', [adminController::class, 'courses3']);
 Route::get ('/dashboard/FourthYear', [adminController::class, 'courses4']);
 
-Route::get ('/dashboard/courses/addcourse', [adminController::class, 'InsertCourse']);
-Route::post ('/dashboard/courses/postcourse', [adminController::class, 'PostInsertCourse']);
-Route::get ('dashboard/delete/{id}', [adminController::class, 'deleteCourse']);
-Route::get ('/dashboard/courses/updatecourse/{id}', [adminController::class, 'showCourse']);
-Route::post ('/dashboard/courses/updatecourse', [adminController::class, 'updateCourse']);
+Route::get ('/dashboard/courses/addcourse1', [adminController::class, 'InsertCourse1']);
+Route::post ('/dashboard/courses/postcourse1', [adminController::class, 'PostInsertCourse1']);
+Route::get ('/dashboard/courses/addcourse2', [adminController::class, 'InsertCourse2']);
+Route::post ('/dashboard/courses/postcourse2', [adminController::class, 'PostInsertCourse2']);
+Route::get ('/dashboard/courses/addcourse3', [adminController::class, 'InsertCourse3']);
+Route::post ('/dashboard/courses/postcourse3', [adminController::class, 'PostInsertCourse3']);
+Route::get ('/dashboard/courses/addcourse4', [adminController::class, 'InsertCourse4']);
+Route::post ('/dashboard/courses/postcourse4', [adminController::class, 'PostInsertCourse4']);
+
+
+Route::get ('dashboard/delete1/{id}', [adminController::class, 'deleteCourse1']);
+Route::get ('dashboard/delete2/{id}', [adminController::class, 'deleteCourse2']);
+Route::get ('dashboard/delete3/{id}', [adminController::class, 'deleteCourse3']);
+Route::get ('dashboard/delete4/{id}', [adminController::class, 'deleteCourse4']);
+
+Route::get ('/dashboard/courses/updatecourse1/{id}', [adminController::class, 'showCourse1']);
+Route::get ('/dashboard/courses/updatecourse2/{id}', [adminController::class, 'showCourse2']);
+Route::get ('/dashboard/courses/updatecourse3/{id}', [adminController::class, 'showCourse3']);
+Route::get ('/dashboard/courses/updatecourse4/{id}', [adminController::class, 'showCourse4']);
+
+Route::post ('/dashboard/courses/updatecourse1', [adminController::class, 'updateCourse1']);
+Route::post ('/dashboard/courses/updatecourse2', [adminController::class, 'updateCourse2']);
+Route::post ('/dashboard/courses/updatecourse3', [adminController::class, 'updateCourse3']);
+Route::post ('/dashboard/courses/updatecourse4', [adminController::class, 'updateCourse4']);
 
 
 
