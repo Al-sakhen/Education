@@ -2,350 +2,72 @@
 
 namespace App\Http\Controllers;
 use App\Models\Years;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Courses;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert ;
 
 
 class adminController extends Controller
 {
+
     public function index(){
 
         $data = years::all();
         return view('dashboard/index' , ['data'=>$data ,'title'=>'Dashboard']);
     }
 
-    public function courses1(){
-        $data = years::all();
 
-        $course =DB::table('courses')->where('year_id', '=' , 1) ->get();
+    public function register(){
+        return view('dashboard.user.register', ['title'=>'Register']);
 
-        return view('dashboard/courses/viewfst' , ['data'=>$data , 'course'=>$course , 'title'=>'Courses']);
     }
-    public function courses2(){
-        $data = years::all();
+    public function postregister(Request $request){
 
-        $course =DB::table('courses')->where('year_id', '=' , 2) ->get();
+        $values =$request->validate([
+            'name'=>'required|min:3|max:30',
+            'email'=>'required|email',
+            'password'=>'required|min:6',
+            're_password'=>'required_with:password|same:password'
+        ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make( $request->password);
+        $user ->save();
 
-        return view('dashboard/courses/viewscnd' , ['data'=>$data , 'course'=>$course , 'title'=>'Courses']);
-    }
-    public function courses3(){
-        $data = years::all();
-
-        $course =DB::table('courses')->where('year_id', '=' , 3) ->get();
-
-        return view('dashboard/courses/viewthrd' , ['data'=>$data , 'course'=>$course , 'title'=>'Courses']);
-    }
-    public function courses4(){
-
-        $data = years::all();
-
-        $course =DB::table('courses')->where('year_id', '=' , 4) ->get();
-
-        return view('dashboard/courses/viewfrth' , ['data'=>$data , 'course'=>$course , 'title'=>'Courses']);
+        return redirect(url('/dashboard'));
     }
 
 
-    // courses fucntions
-    public function InsertCourse1(){
-        return view('dashboard/courses/insertfst', ['title'=>'CourseUpload']);
-    }
-    public function InsertCourse2(){
-        return view('dashboard/courses/insertscnd', ['title'=>'CourseUpload']);
-    }
-    public function InsertCourse3(){
-        return view('dashboard/courses/insertthrd', ['title'=>'CourseUpload']);
-    }
-    public function InsertCourse4(){
-        return view('dashboard/course/insertfrth', ['title'=>'CourseUpload']);
+    public function login(){
+        return view('dashboard.user.login', ['title'=>'Login']);
     }
 
-    public function PostInsertCourse1(Request $request){
+    public function postlogin(Request $request){
 
-        // Methods we can use on $request
-        // guessExtencion()
-        // getMimeType()
-        // store()
-        // asStore()
-        // storePublicly()
-        // move()
-        // getClientOriginalName();
-        // getClientMimeType()
-        // getClientExtension()
-        // getSize()
-        // getError()
-        // isValid()
-
-
-        // $test = $request->file('image')->getSize();
-        // dd($test);
-
-        $value=$request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
+        $this->validate($request, [
+            'email'           => 'required|max:255|email',
+            'password'           => 'required',
         ]);
 
-        $newImageName = time(). '-'. $request->name . '.' . $request->image->extension();
-        $request->image->move(public_path('img'), $newImageName);
+        $r = $request->only('email', 'password');
 
-        $course =new Courses();
-        $course->name = $request->name;
-        $course->description =$request->description;
-        $course->image_path = $newImageName;
-        $course->year_id = $request->year_id;
-        $course->save();
-
-        if($course){
-            Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
-
+        if(Auth::attempt($r)){
+            // echo 'success';
+            return redirect(url('dashboard'));
+        }else{
+            
         }
-        return redirect(url('dashboard/FirstYear'));
+
     }
-    public function PostInsertCourse2(Request $request){
-
-        // Methods we can use on $request
-        // guessExtencion()
-        // getMimeType()
-        // store()
-        // asStore()
-        // storePublicly()
-        // move()
-        // getClientOriginalName();
-        // getClientMimeType()
-        // getClientExtension()
-        // getSize()
-        // getError()
-        // isValid()
-
-
-        // $test = $request->file('image')->getSize();
-        // dd($test);
-
-        $value=$request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
-        ]);
-
-        $newImageName = time(). '-'. $request->name . '.' . $request->image->extension();
-        $request->image->move(public_path('img'), $newImageName);
-
-        $course =new Courses();
-        $course->name = $request->name;
-        $course->description =$request->description;
-        $course->image_path = $newImageName;
-        $course->year_id = $request->year_id;
-        $course->save();
-
-        if($course){
-            Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
-
-        }
-        return redirect('/dashboard/SecondYear');
-    }
-    public function PostInsertCourse3(Request $request){
-
-        // Methods we can use on $request
-        // guessExtencion()
-        // getMimeType()
-        // store()
-        // asStore()
-        // storePublicly()
-        // move()
-        // getClientOriginalName();
-        // getClientMimeType()
-        // getClientExtension()
-        // getSize()
-        // getError()
-        // isValid()
-
-
-        // $test = $request->file('image')->getSize();
-        // dd($test);
-
-        $value=$request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
-        ]);
-
-        $newImageName = time(). '-'. $request->name . '.' . $request->image->extension();
-        $request->image->move(public_path('img'), $newImageName);
-
-        $course =new Courses();
-        $course->name = $request->name;
-        $course->description =$request->description;
-        $course->image_path = $newImageName;
-        $course->year_id = $request->year_id;
-        $course->save();
-
-        if($course){
-            Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
-
-        }
-        return redirect('/dashboard/SecondYear');
-    }
-    public function PostInsertCourse4(Request $request){
-
-        // Methods we can use on $request
-        // guessExtencion()
-        // getMimeType()
-        // store()
-        // asStore()
-        // storePublicly()
-        // move()
-        // getClientOriginalName();
-        // getClientMimeType()
-        // getClientExtension()
-        // getSize()
-        // getError()
-        // isValid()
-
-
-        // $test = $request->file('image')->getSize();
-        // dd($test);
-
-        $value=$request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
-        ]);
-
-        $newImageName = time(). '-'. $request->name . '.' . $request->image->extension();
-        $request->image->move(public_path('img'), $newImageName);
-
-        $course =new Courses();
-        $course->name = $request->name;
-        $course->description =$request->description;
-        $course->image_path = $newImageName;
-        $course->year_id = $request->year_id;
-        $course->save();
-
-        if($course){
-            Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
-
-        }
-        return redirect('/dashboard/SecondYear');
-    }
-
-    public function deleteCourse1($id){
-        $data = Courses::find($id);
-        $data->delete();
-        return redirect(url('dashboard/FirstYear'));
-    }
-    public function deleteCourse2($id){
-        $data = Courses::find($id);
-        $data->delete();
-        return redirect(url('dashboard/SecondYear'));
-    }
-    public function deleteCourse3($id){
-        $data = Courses::find($id);
-        $data->delete();
-        return redirect(url('dashboard/ThirdYear'));
-    }
-    public function deleteCourse4($id){
-        $data = Courses::find($id);
-        $data->delete();
-        return redirect(url('dashboard/FourthYear'));
+    public function logout(){
+        Auth::logout();
+        return redirect(url('login'));
     }
 
 
-
-
-    public function showCourse1($id){
-        $course =Courses::where('id', '=' , $id) ->get();
-        // dd($course);
-        return view('dashboard/courses/updatefst', ['data'=>$course , 'title'=>'UpdateCourse']);
-    }
-    public function showCourse2($id){
-        $course =Courses::where('id', '=' , $id) ->get();
-        // dd($course);
-        return view('dashboard/courses/updatescnd', ['data'=>$course , 'title'=>'UpdateCourse']);
-    }
-    public function showCourse3($id){
-        $course =Courses::where('id', '=' , $id) ->get();
-        // dd($course);
-        return view('dashboard/courses/updatethrd', ['data'=>$course , 'title'=>'UpdateCourse']);
-    }
-    public function showCourse4($id){
-        $course =Courses::where('id', '=' , $id) ->get();
-        // dd($course);
-        return view('dashboard/courses/updatefrth', ['data'=>$course , 'title'=>'UpdateCourse']);
-    }
-
-    public function updateCourse1(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
-        ]);
-
-        $data= Courses::find($request->id);
-        $data->name = $request->name;
-        $data->description = $request->description;
-        $data->image_path = $request->image;
-        $data->year_id = $request->year_id;
-        $data->save();
-
-        return redirect(url('dashboard/FirstYear'));
-    }
-    public function updateCourse2(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
-        ]);
-
-        $data= Courses::find($request->id);
-        $data->name = $request->name;
-        $data->description = $request->description;
-        $data->image_path = $request->image;
-        $data->year_id = $request->year_id;
-        $data->save();
-
-        return redirect(url('dashboard/SecondYear'));
-    }
-    public function updateCourse3(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
-        ]);
-
-        $data= Courses::find($request->id);
-        $data->name = $request->name;
-        $data->description = $request->description;
-        $data->image_path = $request->image;
-        $data->year_id = $request->year_id;
-        $data->save();
-
-        return redirect(url('dashboard/ThirdYear'));
-    }
-    public function updateCourse4(Request $request){
-        $request->validate([
-            'name'=>'required',
-            'description'=>'required',
-            'image'=>'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
-            'year_id'=>'required',
-        ]);
-
-        $data= Courses::find($request->id);
-        $data->name = $request->name;
-        $data->description = $request->description;
-        $data->image_path = $request->image;
-        $data->year_id = $request->year_id;
-        $data->save();
-
-        return redirect(url('dashboard/FourthYear'));
-    }
-    // Enf of courses functions
 }

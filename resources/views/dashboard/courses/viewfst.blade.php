@@ -35,6 +35,7 @@
                 </thead>
                 <tbody>
                     @foreach ($course as $c)
+                    
 
                     <tr>
                     <td>{{$c->id}}</td>
