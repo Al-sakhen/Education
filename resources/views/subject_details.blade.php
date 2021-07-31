@@ -1,7 +1,7 @@
 @include('header')
 
 <!-- End Header -->
-<main id="main" data-aos="fade-up">
+<main id="main" data-aos="fade-up" style="height: 100vh;">
     <!-- ======= Breadcrumbs Section ======= -->
     <section class="breadcrumbs">
     <div class="container">

@@ -2,7 +2,7 @@
 @include('header')
 <!-- End Header -->
 
-<main id="main" data-aos="fade-up">
+<main id="main" data-aos="fade-up" style="height: 100vh;">
 
 <!-- ======= Breadcrumbs ======= -->
 <section class="breadcrumbs">
@@ -24,7 +24,7 @@
 <div class="team-boxed">
     <div class="container">
         <div class="row people">
-            
+
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 float-left">
                 <div class="wt-categorycontent">
                     <figure><img src="{{asset('assets/img/subjects/c-logo.png')}}" alt="image description"></figure>

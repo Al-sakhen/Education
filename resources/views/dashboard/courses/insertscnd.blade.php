@@ -1,49 +1,63 @@
 @include('dashboard/header')
 
-<div class="container">
+<div class="container-fluid">
 
     <div class="content-wrapper">
-         <!-- Main content -->
-         <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                <div class="col-12">
-                    @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
+          <!-- Main content -->
+          <section class="content">
+            <div class="row">
+            <div class="mx-auto col-6 m-4">
+                <div class="card card-primary ">
+
+                    <div class="card-header">
+                        <h3 class="card-title">Add new course</h3>
                     </div>
-                @endif
                 <form action="{{url('dashboard/courses/postcourse2')}}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @include('sweetalert::alert')
+                    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="inputName">Course Name</label>
+                            <input type="text" name="name" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDescription">Course Description</label>
+                            <textarea id="inputDescription" name="description" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputProjectLeader">Course Img</label>
+                            <input type="file" name="image" id="inputProjectLeader" class="form-control">
+                            </div>
+                        <div class="form-group">
+                        <label for="inputStatus">Year</label>
+                        <select id="inputStatus" name="year_id"  class="form-control custom-select">
+                            <option>2</option>
+                        </select>
+                        </div>
+                        <div class="">
+                            <input type="submit" value="Add Course" class="btn btn-success float-left">
+                            <a href="{{url('dashboard/SecondYear')}}" class="btn btn-secondary float-right">Show Courses</a>
+                        </div>
 
-                    <div class="form-group">
-                    <label for="exampleFormControlInput1">Course name</label>
-                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Insert course name">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Course description</label>
-                        <input type="text" name="description" class="form-control" id="exampleFormControlInput1" placeholder="Insert course description">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Img</label>
-                        <input type="file" name="image" class="form-control" id="exampleFormControlInput1" >
-                    </div>
-                    <div class="form-group">
-                    <label for="exampleFormControlSelect1">Select year</label>
-                    <select class="form-control" name="year_id" id="exampleFormControlSelect1">
-                        <option>2</option>
-                    </select>
-                    </div>
-                    <input type="submit" class="btn btn-danger">
-
                 </form>
+                <!-- /.card-body -->
                 </div>
-                </div>
+                <!-- /.card -->
             </div>
+
+            </div>
+
         </section>
     </div>
 </div>

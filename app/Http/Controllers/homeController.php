@@ -21,12 +21,13 @@ public function inner_page(){
     }
 
 public function subject_details(Request $request){
+
     $subjects = Subjects::where('course_id', '=' , $request->id)->with('course') ->get();
     foreach($subjects as $s){
     dd($s->course->name);
     }
 
-    return view('subject_details');
+    return view('subject_details' ,['details'=>$subjects]);
 }
 
 

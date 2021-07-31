@@ -55,12 +55,13 @@ class adminController extends Controller
         ]);
 
         $r = $request->only('email', 'password');
+        dd($r);
 
         if(Auth::attempt($r)){
             // echo 'success';
             return redirect(url('dashboard'));
         }else{
-            
+
         }
 
     }

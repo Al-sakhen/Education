@@ -11,14 +11,17 @@
         <div class="row">
         <div class="col-12">
             <div class="card m-5">
+                @include('sweetalert::alert')
+                @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
                 <div class="card-header">
-                <h3 class="card-title">Responsive Hover Table</h3>
+                <h3 class="card-title">First year courses</h3>
+                <td><a href="{{url('/dashboard/courses/addcourse1')}}" class="btn btn-info float-right">Add new course</a></td>
+
 
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive ">
-                <td><a href="{{url('/dashboard/courses/addcourse1')}}" class="btn btn-default">Add</a></td>
 
                 <table class="table table-hover text-wrap pt-5">
 
@@ -31,11 +34,12 @@
                     <th>Year</th>
                     <th>Update</th>
                     <th>Delete</th>
-                    </tr>
+                    <th>Materials</th>
+                </tr>
                 </thead>
                 <tbody>
                     @foreach ($course as $c)
-                    
+
 
                     <tr>
                     <td>{{$c->id}}</td>
@@ -43,8 +47,10 @@
                     <td>{{$c->description}}</td>
                     <td><img class="w-25 image-fluid" src="{{asset('img/'. $c->image_path)}}" alt="asrfaf"></td>
                     <td>{{$c->year_id}}</td>
-                    <td><a href="{{url('/dashboard/courses/updatecourse1/'. $c->id)}}" class="btn btn-default">update</a></td>
+                    <td><a href="{{url('/dashboard/courses/updatecourse1/'. $c->id)}}" class="btn btn-secondary">update</a></td>
                     <td><a href={{url('dashboard/delete1/'.$c->id) }} class="btn btn-danger">delete</a></td>
+                    <td><a href='#' class="btn btn-success">add</a> <a href="#" class="btn btn-info">show</a></td>
+
                     </tr>
 
                     @endforeach

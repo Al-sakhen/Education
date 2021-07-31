@@ -13,12 +13,12 @@
             <div class="card m-5">
 
                 <div class="card-header">
-                <h3 class="card-title">Responsive Hover Table</h3>
+                    <h3 class="card-title">Fourth year courses</h3>
+                    <td><a href="{{url('/dashboard/courses/addcourse4')}}" class="btn btn-info float-right">Add new course</a></td>
 
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive ">
-                <td><a href="{{url('/dashboard/courses/addcourse4')}}" class="btn btn-default">Add</a></td>
 
                 <table class="table table-hover text-wrap pt-5">
 

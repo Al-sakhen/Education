@@ -10,9 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 
 
+
 class coursesController extends Controller
 {
-    
+
 
     public function courses1(){
         $data = years::all();
@@ -84,7 +85,7 @@ class coursesController extends Controller
             Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
 
         }
-        return redirect(url('dashboard/FirstYear'));
+        return redirect(url('dashboard/courses/addcourse1'));
     }
     public function PostInsertCourse2(Request $request){
 
@@ -109,7 +110,7 @@ class coursesController extends Controller
             Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
 
         }
-        return redirect('/dashboard/SecondYear');
+        return redirect('dashboard/courses/addcourse2');
     }
     public function PostInsertCourse3(Request $request){
 
@@ -152,7 +153,7 @@ class coursesController extends Controller
             Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
 
         }
-        return redirect('/dashboard/ThirdYear');
+        return redirect('dashboard/courses/addcourse3');
     }
     public function PostInsertCourse4(Request $request){
 
@@ -195,12 +196,17 @@ class coursesController extends Controller
             Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
 
         }
-        return redirect('/dashboard/FourthYear');
+        return redirect('dashboard/courses/addcourse4');
     }
 
     public function deleteCourse1($id){
         $data = Courses::find($id);
         $data->delete();
+
+        if($data){
+            alert()->question('Title','Lorem Lorem Lorem');
+        }
+
         return redirect(url('dashboard/FirstYear'));
     }
     public function deleteCourse2($id){
@@ -248,19 +254,25 @@ class coursesController extends Controller
             'image'=>'image|mimes:jpeg,png,jpg,gif,svg|max:5048',
             'year_id'=>'required',
         ]);
-
-        $newImageName = time(). '-'. 'year'.$request->year_id . '.' . $request->image->extension();
-
         $data= Courses::find($request->id);
         $data->name = $request->name;
         $data->description = $request->description;
-        if($request->image){
-            $data->image_path = $request->image;
-        }else{
-            $data->image_path= $newImageName;
-        }
+        $data->image_path = $request->image;
         $data->year_id = $request->year_id;
         $data->save();
+
+        // $newImageName = time(). '-'. 'year'.$request->year_id . '.' . $request->image->extension();
+
+        // $data= Courses::find($request->id);
+        // $data->name = $request->name;
+        // $data->description = $request->description;
+        // if($request->image){
+        //     $data->image_path = $request->image;
+        // }else{
+        //     $data->image_path= $newImageName;
+        // }
+        // $data->year_id = $request->year_id;
+        // $data->save();
 
         return redirect(url('dashboard/FirstYear'));
     }

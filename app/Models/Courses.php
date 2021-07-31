@@ -32,7 +32,7 @@ class Courses extends Model
 
 
     public function subject(){
-        return $this->hasMany(Subjects::class, 'course_id', 'id');
+        return $this->hasMany(course_subjects::class, 'course_id', 'id');
     }
 
 
