@@ -2,7 +2,7 @@
 @include('header')
 <!-- End Header -->
 
-<main id="main" data-aos="fade-up" style="height: 100vh;">
+<main id="main" data-aos="fade-up" >
 
 <!-- ======= Breadcrumbs ======= -->
 <section class="breadcrumbs">

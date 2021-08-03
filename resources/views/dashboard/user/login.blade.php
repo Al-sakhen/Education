@@ -22,8 +22,9 @@
 <!-- /.login-logo -->
 <div class="card">
     <div class="card-body login-card-body">
-    <p class="login-box-msg">Sign in to start your session</p>    @if ($errors->any())
+    <p class="login-box-msg">Sign in to start your session</p>
 
+    @if ($errors->any())
     <div class="alert alert-info alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <h5><i class="icon fas fa-info"></i> Alert!</h5>
@@ -34,6 +35,19 @@
         </ul>
       </div>
       @endif
+
+      @if (session()->has('flash-message'))
+      <div class="alert alert-info alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h5><i class="icon fas fa-info"></i> Alert!</h5>
+        <ul>
+            <li> {{Session::get('flash-message')}}</li>
+        </ul>
+      </div>
+      @endif
+
+      {{Session::get('flash-message')}}
+
 
     <form action="{{url('postlogin')}}" method="post">
         @csrf

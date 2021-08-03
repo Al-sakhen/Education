@@ -36,41 +36,42 @@
 
 <!-- ======================================================== -->
 
+
 </head>
 
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="d-flex align-items-center">
+<header id="header" class="d-flex align-items-center" >
     <div class="container d-flex align-items-center justify-content-between">
 
-    <h1 class="logo"><a href="index.html">كليفير تيم<span>.</span></a></h1>
+        <h1 class="logo"><a href="index.html">كليفير تيم<span>.</span></a></h1>
 
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
-    <nav id="navbar" class="navbar">
-        <ul>
-        <li><a class="nav-link scrollto active" href="{{url('index')}}">الرئيسية</a></li>
-        <li><a class="nav-link scrollto" href="#about">من نحن؟</a></li>
-        <li><a class="nav-link scrollto" href=" {{url('index/#services')}}">الخدمات</a></li>
-        <li><a class="nav-link scrollto" href="#team">الفريق</a></li>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="{{url('index')}}">الرئيسية</a></li>
+                <li><a class="nav-link scrollto" href="#about">من نحن؟</a></li>
+                <li><a class="nav-link scrollto" href=" {{url('index/#services')}}">الخدمات</a></li>
+                <li><a class="nav-link scrollto" href="#team">الفريق</a></li>
 
-        <li><a class="nav-link scrollto" href="{{url('index/#contact')}}">تواصل معنا</a></li>
-            <li class="dropdown"><a href="#"><span>المواد الدراسية</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto" href="{{url('index/#contact')}}">تواصل معنا</a></li>
+                    <li class="dropdown"><a href="#"><span>المواد الدراسية</span> <i class="bi bi-chevron-down"></i></a>
 
-                <ul>
-                <li><a href="{{url('FstYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الأولى</a></a></li>
-                <li><a href="{{url('ScndYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الثانية</a></a></li>
-                <li><a href="{{url('ThrdYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الثالثة</a></a></li>
-                <li><a href="{{url('FrthYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الرابعة</a></a></li>
-                <li><div class="dropdown-divider"></div></li>
-                <li><a href="" class="dropdown-item"><i class="fas fa-angle-left"></i>المواد المشتركة</a></a></li>
-                </ul>
-            </li>
-        </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav>
+                    <ul>
+                        <li><a href="{{url('FstYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الأولى</a></a></li>
+                        <li><a href="{{url('ScndYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الثانية</a></a></li>
+                        <li><a href="{{url('ThrdYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الثالثة</a></a></li>
+                        <li><a href="{{url('FrthYear')}}" class="dropdown-item"><i class="fas fa-angle-left"></i>السنة الرابعة</a></a></li>
+                        <li><div class="dropdown-divider"></div></li>
+                        <li><a href="" class="dropdown-item"><i class="fas fa-angle-left"></i>المواد المشتركة</a></a></li>
+                        </ul>
+                    </li>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
     </div>
 </header>

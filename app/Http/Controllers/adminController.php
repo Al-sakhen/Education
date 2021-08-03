@@ -14,10 +14,13 @@ use RealRashid\SweetAlert\Facades\Alert ;
 class adminController extends Controller
 {
 
+
     public function index(){
 
         $data = years::all();
-        return view('dashboard/index' , ['data'=>$data ,'title'=>'Dashboard']);
+        $u = auth()->user();
+
+        return view('dashboard/index' , ['data'=>$data ,'title'=>'Dashboard' , 'user'=>$u]);
     }
 
 
@@ -49,19 +52,19 @@ class adminController extends Controller
 
     public function postlogin(Request $request){
 
-        $this->validate($request, [
+        $data =$this->validate($request, [
             'email'           => 'required|max:255|email',
             'password'           => 'required',
         ]);
 
         $r = $request->only('email', 'password');
-        dd($r);
+
+
 
         if(Auth::attempt($r)){
-            // echo 'success';
-            return redirect(url('dashboard'));
+            return redirect(route('dashboard'));
         }else{
-
+            return  redirect()->back()->with('flash-message','email or password not correct');
         }
 
     }
@@ -69,6 +72,5 @@ class adminController extends Controller
         Auth::logout();
         return redirect(url('login'));
     }
-
 
 }

@@ -1,5 +1,5 @@
 <!-- ======= Footer ======= -->
-<footer id="footer">
+<footer id="footer" >
 
       <div class="container py-4">
         <div class="copyright">

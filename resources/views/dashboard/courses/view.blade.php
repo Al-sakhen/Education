@@ -11,13 +11,15 @@
         <div class="row">
         <div class="col-12">
             <div class="card m-5">
+                @include('sweetalert::alert')
+                @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
                 <div class="card-header">
-                    <h3 class="card-title">Third year courses</h3>
-                    <td><a href="{{url('/dashboard/courses/addcourse3')}}" class="btn btn-info float-right">Add new course</a></td>
+                <h3 class="card-title">First year courses</h3>
+                <td><a href="{{url('/dashboard/courses/addcourse')}}" class="btn btn-info float-right">Add new course</a></td>
 
 
-                    </div>
+                </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive ">
 
@@ -32,10 +34,12 @@
                     <th>Year</th>
                     <th>Update</th>
                     <th>Delete</th>
-                    </tr>
+                    <th>Materials</th>
+                </tr>
                 </thead>
                 <tbody>
                     @foreach ($course as $c)
+
 
                     <tr>
                     <td>{{$c->id}}</td>
@@ -43,8 +47,10 @@
                     <td>{{$c->description}}</td>
                     <td><img class="w-25 image-fluid" src="{{asset('img/'. $c->image_path)}}" alt="asrfaf"></td>
                     <td>{{$c->year_id}}</td>
-                    <td><a href="{{url('/dashboard/courses/updatecourse3/'. $c->id)}}" class="btn btn-default">update</a></td>
-                    <td><a href={{url('dashboard/delete3/'.$c->id) }} class="btn btn-danger">delete</a></td>
+                    <td><a href="{{url('/dashboard/courses/updatecourse/'. $c->id)}}" class="btn btn-secondary">update</a></td>
+                    <td><a href={{url('dashboard/delete/'.$c->id) }} class="btn btn-danger">delete</a></td>
+                    <td><a href='{{url('/dashboard/cousrse/add/'.$c->id)}}' class="btn btn-success mb-3">add</a> <a href="#" class="btn btn-info">show</a></td>
+
                     </tr>
 
                     @endforeach

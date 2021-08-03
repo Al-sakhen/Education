@@ -19,6 +19,7 @@ class Years extends Model
     ];
 
 
+    
 public function course(){
     return $this->hasMany(Courses::class, 'year_id', 'id');
 }

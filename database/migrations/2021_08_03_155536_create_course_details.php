@@ -3,8 +3,10 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
-class CreateCourseSubjectsTable extends Migration
+
+class CreateCourseDetails extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +15,19 @@ class CreateCourseSubjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('course_subjects', function (Blueprint $table) {
+        Schema::create('course_details', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->enum('type' , ['link' , 'file']);
+            $table->string('file_path');
+            $table->string('link_text');
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
-            $table->enum('type' , ['link' , 'pdf']);
             $table->timestamps();
         });
+
+
+
     }
 
     /**
@@ -30,6 +37,7 @@ class CreateCourseSubjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_subjects');
+        Schema::dropIfExists('course_details');
+
     }
 }
