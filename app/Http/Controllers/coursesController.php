@@ -63,7 +63,7 @@ class coursesController extends Controller
             Alert::toast('تمت اضافة الكورس بنجاح ', 'Toast Type');
 
         }
-        return redirect(url('dashboard/courses/addcourse'));
+        return redirect()->back();
     }
 
 
@@ -75,7 +75,7 @@ class coursesController extends Controller
             alert()->question('Title','Lorem Lorem Lorem');
         }
 
-        return redirect(url('dashboard'));
+        return redirect()->back();
     }
 
 

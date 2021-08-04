@@ -22,7 +22,7 @@ class CreateCourseDetails extends Migration
             $table->string('file_path');
             $table->string('link_text');
             $table->unsignedBigInteger('course_id');
-            $table->foreign('course_id')->references('id')->on('courses');
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->timestamps();
         });
 

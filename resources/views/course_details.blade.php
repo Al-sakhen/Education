@@ -26,33 +26,27 @@
                     <div class="career-search mb-60">
                         <div class="filter-result">
                             <!-- <p class="mb-30 ff-montserrat">Total Job Openings : 89</p> -->
+                        @foreach ($details as $d)
 
-                        <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
+                        <div class="job-box d-md-flex align-items-center justify-content-center mb-25">
                                 <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
-                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
-                                    <img class="w-75" src="{{asset('assets/img/desc/folder.svg')}}" alt="" srcset="">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0  d-lg-flex">
+                                    <img class="w-75" src="{{asset('assets/img/desc/folder1.svg')}}" alt="" srcset="">
 
                                     </div>
                                     <div class="job-content">
-                                        <h5 class="text-center text-md-left">C++ Pocket Reference</h5>
+
                                         <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans  justify-content-between">
-                                            <li class="mr-md-4 n">
-                                                <i class="zmdi zmdi-pin mr-2"></i>
-                                                المؤلف الفلاني
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-money mr-2"></i> النسخة الأولى
-                                            </li>
-                                            <li class="mr-md-4">
-                                                <i class="zmdi zmdi-time mr-2"></i> 550 صفحة
-                                            </li>
+                                            <h5 class="text-center text-md-left mt-4">{{$d->name}}</h5>
+
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">تحميل</a>
+                                    <a href="{{url('download/'.$d->file_path)}}" class="btn d-block w-100 d-sm-inline-block btn-light">تحميل</a>
                                 </div>
                         </div>
+                        @endforeach
 
 
 
@@ -60,7 +54,7 @@
                         </div>
                     </div>
 
-                
+
                 </div>
                 <div class="col-lg-6">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajFAiw4s1U4QbGszcQ-rAb3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

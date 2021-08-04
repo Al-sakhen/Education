@@ -27,8 +27,16 @@ Route::get ('/ScndYear', [homeController::class, 'ScndYear']);
 Route::get ('/ThrdYear', [homeController::class, 'ThrdYear']);
 Route::get ('/FrthYear', [homeController::class, 'FrthYear']);
 
+//  -----------------admin controller ----------------------
+Route::get ('/register', [adminController::class, 'register']);
+Route::post ('/postregister', [adminController::class, 'postregister']);
 
-// year controller
+Route::get ('/login', [adminController::class, 'login'])->name('login');
+Route::post ('/postlogin', [adminController::class, 'postlogin']);
+
+Route::get ('/logout', [adminController::class, 'logout']);
+
+//  -----------------year controller ----------------------
 Route::get ('/year', [yearsController::class, 'InsertName']);
 Route::post ('/PostInsertName', [yearsController::class, 'PostInsertName']);
 
@@ -46,20 +54,21 @@ Route::get ('dashboard/delete/{id}', [coursesController::class, 'deleteCourse'])
 Route::get ('/dashboard/courses/updatecourse/{id}', [coursesController::class, 'showCourse']);
 Route::post ('/dashboard/courses/updatecourse', [coursesController::class, 'updateCourse']);
 
-//  -----------------admin controller ----------------------
-Route::get ('/register', [adminController::class, 'register']);
-Route::post ('/postregister', [adminController::class, 'postregister']);
 
-Route::get ('/login', [adminController::class, 'login'])->name('login');
-Route::post ('/postlogin', [adminController::class, 'postlogin']);
-
-Route::get ('/logout', [adminController::class, 'logout']);
 
 
 //  -----------------details controller ----------------------
+Route::get ('/dashboard/course/details/{course_id}', [detailsController::class, 'view']);
+
 
 Route::get ('/dashboard/cousrse/add/{course_id}', [detailsController::class, 'insert']);
 Route::post ('/dashboard/courses/postinsert', [detailsController::class, 'postInsert']);
+
+Route::get ('dashboard/detail/delete/{id}', [detailsController::class, 'delete']);
+
+Route::get ('download/{file_path}', [detailsController::class, 'download']);
+
+
 
 
 

@@ -24,10 +24,10 @@ public function inner_page(){
 public function course_details(Request $request){
 
     $details = Course_details::where('course_id', '=' , $request->id)->with('course') ->get();
-    
-    foreach($details as $s){
-    dd($s);
-    }
+
+    // foreach($details as $s){
+    // dd($s);
+    // }
 
     return view('course_details' ,['details'=>$details]);
 }

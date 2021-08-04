@@ -13,7 +13,8 @@
                     </div>
                 <form action="{{url('dashboard/courses/postinsert')}}" method="POST" enctype="multipart/form-data">
                     @csrf
-
+                    @include('sweetalert::alert')
+                    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -51,7 +52,7 @@
 
                         <div class="">
                             <input type="submit" value="Add" class="btn btn-success float-left">
-                            <a href="#" class="btn btn-secondary float-right">Show Courses</a>
+                            {{-- <a href="#" class="btn btn-secondary float-right">Show Courses</a> --}}
                         </div>
                         <input type="hidden" name="course_id" value="{{$course_id}}">
 

@@ -15,10 +15,8 @@
                 @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 
                 <div class="card-header">
-                <h3 class="card-title">First year courses</h3>
+                <h3 class="card-title">Courses</h3>
                 <td><a href="{{url('/dashboard/courses/addcourse')}}" class="btn btn-info float-right">Add new course</a></td>
-
-
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive ">
@@ -32,8 +30,8 @@
                     <th>Description</th>
                     <th>Img</th>
                     <th>Year</th>
-                    <th>Update</th>
-                    <th>Delete</th>
+                    <th>Methods</th>
+
                     <th>Materials</th>
                 </tr>
                 </thead>
@@ -45,11 +43,11 @@
                     <td>{{$c->id}}</td>
                     <td>{{$c->name}}</td>
                     <td>{{$c->description}}</td>
-                    <td><img class="w-25 image-fluid" src="{{asset('img/'. $c->image_path)}}" alt="asrfaf"></td>
+                    <td><img class="image-fluid" style="width: 3.5rem" src="{{asset('img/'. $c->image_path)}}" alt="asrfaf"></td>
                     <td>{{$c->year_id}}</td>
-                    <td><a href="{{url('/dashboard/courses/updatecourse/'. $c->id)}}" class="btn btn-secondary">update</a></td>
-                    <td><a href={{url('dashboard/delete/'.$c->id) }} class="btn btn-danger">delete</a></td>
-                    <td><a href='{{url('/dashboard/cousrse/add/'.$c->id)}}' class="btn btn-success mb-3">add</a> <a href="#" class="btn btn-info">show</a></td>
+                    <td><a href="{{url('/dashboard/courses/updatecourse/'. $c->id)}}" ><img style="width: 2.5rem" src="{{asset('assets/img/edit.svg')}}"/></a>
+                    <a href={{url('dashboard/delete/'.$c->id) }}><img  style="width: 2.5rem" src="{{asset('assets/img/banned.svg')}}"></a></td>
+                    <td><a href='{{url('/dashboard/cousrse/add/'.$c->id)}}' ><img style="width: 2.5rem" src="{{asset('assets/img/add.svg')}}"/></a> <a href="{{url('/dashboard/course/details/'.$c->id)}}" ><img style="width: 2.5rem" src="{{asset('assets/img/file.svg')}}"/></a></td>
 
                     </tr>
 
