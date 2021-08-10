@@ -7,7 +7,7 @@
     <h1>أهلاً بكم في <span class="shadow1">كليفير تيم</span></h1>
     <h2>فريق عمل طلابي لتوفير الكورسات والمصادر للتسهيل على الطلاب!</h2>
     <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto"> ابدأ الآن</a>
+        <a href="#services" class="btn-get-started scrollto"> ابدأ الآن</a>
         <a href="#####" class="glightbox btn-watch-video"><i class="bi bi-play-circle"> </i><span>  الفيديو التعريفي </span></a>
     </div>
     </div>
