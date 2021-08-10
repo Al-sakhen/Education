@@ -25,11 +25,12 @@ public function course_details(Request $request){
 
     $details = Course_details::where('course_id', '=' , $request->id)->with('course') ->get();
 
+
     // foreach($details as $s){
     // dd($s);
     // }
 
-    return view('course_details' ,['details'=>$details]);
+    return view('course_details' ,['details'=>$details , 'name'=>'ahmad']);
 }
 
 
@@ -52,5 +53,11 @@ public function FrthYear(){
     $course =DB::table('courses')->where('year_id', '=' , 4) ->get();
 
     return view('FrthYear', ['course'=>$course]);
+}
+
+public function download(Request $request , $file_path){
+
+
+    return response()->download(public_path('files/'.$file_path));
 }
 }

@@ -10,8 +10,7 @@ use RealRashid\SweetAlert\Facades\Alert ;
 
 class detailsController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         $this->middleware('auth');
     }
 
@@ -43,7 +42,7 @@ class detailsController extends Controller
         $value=$request->validate([
             'name'=>'required',
             'type'=>'required',
-            'link_text'=>'required',
+            'link_text'=>'',
             'file_path'=>'mimes:pdf,doc,docx,ppt,pptx,txt,xls,xlsx',
             'course_id'=>'required',
         ]);
@@ -69,6 +68,8 @@ class detailsController extends Controller
         return redirect()->back();
     }
 
+
+
     public function delete($id){
         $data = Course_details::find($id);
         $data->delete();
@@ -80,17 +81,45 @@ class detailsController extends Controller
         return redirect()->back();
     }
 
-    public function download(Request $request , $file_path){
 
 
-        return response()->download(public_path('files/'.$file_path));
+    public function update($id){
+        $details =Course_details::where('id', '=' , $id) ->get();
+        $u = auth()->user();
+
+
+
+        // dd($course);
+        return view('dashboard/details/update', ['data'=>$details , 'title'=>'UpdateCourse', 'user'=>$u]);
+
     }
+    public function postUpdate(Request $request){
 
-    public function update(){
 
-    }
-    public function postUpdate(){
+        $request->validate([
+            'name'=>'required',
+            'type'=>'required',
+            'link_text'=>'',
+            'file_path'=>'mimes:pdf,doc,docx,ppt,pptx,txt,xls,xlsx',
+            'course_id'=>'required',
+        ]);
+        $data= Course_details::find($request->id);
+        $data->name = $request->name;
+        $data->type = $request->type;
+        $data->link_text = $request->link_text;
 
+        if($request->file_path != null){
+
+        $FileName = time().'-'. $request->name .'.'. $request->file_path->extension();
+        $request->file_path->move(public_path('files'), $FileName);
+        $data->file_path = $FileName;
+        }
+
+
+        $data->course_id = $request->course_id;
+        $data->save();
+
+        return redirect()->back();
     }
 
 

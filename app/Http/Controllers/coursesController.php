@@ -96,8 +96,6 @@ class coursesController extends Controller
             'year_id'=>'required',
         ]);
 
-
-
         $data= Courses::find($request->id);
         $data->name = $request->name;
         $data->description = $request->description;

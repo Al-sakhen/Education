@@ -36,6 +36,7 @@ class adminController extends Controller
             'password'=>'required|min:6',
             're_password'=>'required_with:password|same:password'
         ]);
+        
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;

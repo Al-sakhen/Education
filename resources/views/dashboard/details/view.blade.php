@@ -55,7 +55,7 @@
                     <td class="d-flex justify-content-around">
 
                         <a href='{{url('dashboard/detail/delete/'.$c->id)}}'><img  style="width: 2.5rem" src="{{asset('assets/img/banned.svg')}}"></a>
-                        <a href="{{url('/dashboard/courses/updatecourse/'. $c->id)}}" ><img style="width: 2.5rem" src="{{asset('assets/img/edit.svg')}}"  style=""/></a></td>
+                        <a href="{{url('dashboard/material/update/'. $c->id)}}" ><img style="width: 2.5rem" src="{{asset('assets/img/edit.svg')}}"  style=""/></a></td>
 
                     </tr>
 

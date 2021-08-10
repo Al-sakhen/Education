@@ -27,6 +27,9 @@ Route::get ('/ScndYear', [homeController::class, 'ScndYear']);
 Route::get ('/ThrdYear', [homeController::class, 'ThrdYear']);
 Route::get ('/FrthYear', [homeController::class, 'FrthYear']);
 
+Route::get ('download/{file_path}', [homeController::class, 'download']);
+
+
 //  -----------------admin controller ----------------------
 Route::get ('/register', [adminController::class, 'register']);
 Route::post ('/postregister', [adminController::class, 'postregister']);
@@ -64,9 +67,11 @@ Route::get ('/dashboard/course/details/{course_id}', [detailsController::class, 
 Route::get ('/dashboard/cousrse/add/{course_id}', [detailsController::class, 'insert']);
 Route::post ('/dashboard/courses/postinsert', [detailsController::class, 'postInsert']);
 
+Route::get ('/dashboard/material/update/{course_id}', [detailsController::class, 'update']);
+Route::post ('/dashboard/material/postupdate', [detailsController::class, 'postUpdate']);
+
 Route::get ('dashboard/detail/delete/{id}', [detailsController::class, 'delete']);
 
-Route::get ('download/{file_path}', [detailsController::class, 'download']);
 
 
 

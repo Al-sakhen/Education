@@ -33,20 +33,20 @@
             <li>{{ $error }}</li>
             @endforeach
         </ul>
-      </div>
-      @endif
+    </div>
+    @endif
 
-      @if (session()->has('flash-message'))
-      <div class="alert alert-info alert-dismissible">
+    @if (session()->has('flash-message'))
+    <div class="alert alert-info alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <h5><i class="icon fas fa-info"></i> Alert!</h5>
         <ul>
             <li> {{Session::get('flash-message')}}</li>
         </ul>
-      </div>
-      @endif
+    </div>
+    @endif
 
-      {{Session::get('flash-message')}}
+    {{Session::get('flash-message')}}
 
 
     <form action="{{url('postlogin')}}" method="post">
@@ -70,10 +70,10 @@
         <div class="row">
 
             <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </div>
             <!-- /.col -->
-          </div>
+        </div>
 
     </form>
 
