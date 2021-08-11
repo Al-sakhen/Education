@@ -60,7 +60,7 @@
 }
 
 .card {
-    width: 220px;
+    /* width: 220px; */
     /* height: 321px; */
     background: #fff;
     border-top-right-radius: 10px;
@@ -78,8 +78,7 @@
 
 .card:hover {
     transform: translateY(-5px) scale(1.005) translateZ(0);
-    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
-        0 24px 46px var(--box-shadow-color);
+    box-shadow: 0 24px 36px rgb(0 0 0 / 11%), 0 24px 46px rgb(93 156 241 / 41%);
 }
 
 .card:hover .overlay {
