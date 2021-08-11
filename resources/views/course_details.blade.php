@@ -18,69 +18,60 @@
     </div>
     </section><!-- Breadcrumbs Section -->
 
-    <div class="container">
-    <div class="mix category-a" data-order="1"></div>
-    <div class="mix category-b" data-order="2"></div>
-    <div class="mix category-b category-c" data-order="3"></div>
-    <div class="mix category-a category-d" data-order="4"></div>
-</div>
-
-
-    <!-- <div class="dmne-tab-inner text-center">
-                <ul class="nav nav-tabs " id="ex1" role="tablist">
-                    <li class="nav-item " data-filter="all" role="presentation">
-                        <a class="nav-link" id="ex1-tab-1" >All Categories </a>
-                    </li>
-                    <li class="nav-item"  role="presentation">
-                        <a class="nav-link" >Animation</a>
-                    </li>
-                    <li class="nav-item" data-filter=".category-a" role="presentation">
-                        <a class="nav-link" id="ex1-tab-3" >Design</a>
-                    </li>
-                    <li class="nav-item" data-filter=".category-b" role="presentation">
-                        <a class="nav-link" id="ex1-tab-4" >Illustration</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link"  data-filter=".category-c" id="ex1-tab-5" >Lifestyle</a>
-                    </li>
-                    <li class="nav-item" data-filter=".category-c" role="presentation">
-                        <a class="nav-link" id="ex1-tab-6" >Lifestyle</a>
-                    </li>
-                    <li class="nav-item" data-filter=".category-b" role="presentation">
-                        <a class="nav-link active" id="ex1-tab-7">Business</a>
-                    </li>
-                </ul>
-            </div> -->
-
-
 
     <!-- ======= Portfolio Details Section ======= -->
 <section class="desc">
 
-      <div class="col-lg-12">
 
+     <div class="col-lg-12">
 
-
-
-
-              <div class="box-menu">
+              <div class="box-menu dmne-tab-inner text-center">
                 <ul class="">
-                  <li class="mixitup-control-active" data-filter=".all">All</li>
-                  <li data-filter=".web">Web Design</li>
-                  <li data-filter=".webDev">Web Developer</li>
-                  <li data-filter=".webDev">Courses</li>
-                  <li data-filter=".webDev">Courses</li>
-                  <li data-filter=".webDev">Courses</li>
-                  <li data-filter=".webDev">Courses</li>
-                  <li data-filter=".webDev">Courses</li>
-
+                  <li class="mixitup-control-active nav-link active" data-filter=".all">كل المواد</li>
+                  <li  data-filter=".materials1">ملخصات</li>
+                  <li  data-filter=".testBank">اسئلة سنوات</li>
+                  <li  data-filter=".tests">تفريغات</li>
                   </ul>
                 </div>
-              </div>
+        </div>
+
+    <div class="container box-mix">
+        <div class="row">
 
 
-    <div class="container">
 
+
+                <div class="col-lg-3 mix testBank all">
+                    <div class="materials">
+                        <a href="" class="card education">
+                        <div class="circle">
+                            <img class="" src="{{asset('assets/img/svg/download-file1.png')}}" alt="" srcset="">
+                        </div>
+                        <p>CH1</p>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 mix tests all">
+                    <div class="materials">
+                        <a href="" class="card education">
+                        <div class="circle">
+                            <img class="" src="{{asset('assets/img/svg/download-file1.png')}}" alt="" srcset="">
+                        </div>
+                        <p>CH1</p>
+                        </a>
+                    </div>
+                </div>
+
+
+<<<<<<< HEAD
+                <div class="col-lg-3 mix tests all">
+                    <div class="materials">
+                        <a href="" class="card education">
+                        <div class="circle">
+                            <img class="" src="{{asset('assets/img/svg/download-file1.png')}}" alt="" srcset="">
+=======
             <div class="row">
                 <div class="col-lg-6 ">
 
@@ -109,13 +100,29 @@
                                 <div class="job-right my-4 flex-shrink-0">
                                     <a href="{{url('download/'.$d->file_path)}}" class="btn d-block w-100 d-sm-inline-block btn-light">تحميل</a>
                                 </div>
+>>>>>>> 115fb21081f96aee276b48160231038625a9035d
                         </div>
-                @endforeach -->
+                        <p>CH1</p>
+                        </a>
+                    </div>
+                </div>
 
 
 
+
+
+            <div class="col-lg-3 mix testBank all">
+                    <div class="materials">
+                        <a href="" class="card education">
+                        <div class="circle">
+                            <img class="" src="{{asset('assets/img/svg/download-file1.png')}}" alt="" srcset="">
                         </div>
+<<<<<<< HEAD
+                        <p>CH1</p>
+                        </a>
+=======
 
+>>>>>>> 115fb21081f96aee276b48160231038625a9035d
                     </div>
 
                     
@@ -128,8 +135,10 @@
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajFAiw4s1U4QbGszcQ-rAb3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
                 </div>
-            </div>
-        </div>
+        <!-- url('download/'.$d->file_path) -->
+        <!-- $d->name -->
+    </div>
+</div>
 
 </section>
 </main>
