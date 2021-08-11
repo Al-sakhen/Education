@@ -476,8 +476,10 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   top: 0;
   left: 0;
-  right: 0;
-     opacity: .4;
+  right: 0; 
+
+  opacity: .5;
+
      /* background: #343a40;
     */
 }
@@ -1906,6 +1908,7 @@ h1 {
 }
 
 /************ dmne-tab-inner ************/
+
 .dmne-tab-inner {
     background: #fff;
     padding: 18px 20px 18px 10px;
@@ -1984,3 +1987,4 @@ h1 {
     font-size: 16px;
   }
 }
+

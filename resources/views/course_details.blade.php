@@ -83,8 +83,12 @@
 
             <div class="row">
                 <div class="col-lg-6 ">
+
+              
+
                     <!-- <div class="career-search mb-60"> -->
                         <!-- <div class="filter-result"> -->
+
                             <!-- <p class="mb-30 ff-montserrat">Total Job Openings : 89</p> -->
                         <!-- @foreach ($details as $d)
 
@@ -111,7 +115,18 @@
 
 
                         </div>
+
                     </div>
+
+                    
+
+                    
+
+
+                </div>
+                <div class="col-lg-6">
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajFAiw4s1U4QbGszcQ-rAb3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
                 </div>
             </div>
         </div>

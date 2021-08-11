@@ -70,7 +70,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
             <div class="icon"><i class="bx bxl-dribbble"></i></div>
-            <h4><a href="./inner-page.html">السنة الدراسية الأولى</a></h4>
+            <h4><a href="{{url('FstYear')}}">السنة الدراسية الأولى</a></h4>
             <p>لا بد انك تبحث عن بعض المواد التعليمية مثل التفاضل والتكامل ، ومقدمة البرمجة وبعض المواد الأخرى!  </p>
             </div>
         </div>
@@ -78,7 +78,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
             <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="">السنة الدراسية الثانية</a></h4>
+            <h4><a href="{{url('ScndYear')}}">السنة الدراسية الثانية</a></h4>
             <p>لا بد انك تبحث عن تفاضل وتكامل 2 ، والبرمجة لطلبات الكلية العلمية ، والمنطق الرقمي وغيرها!</p>
             </div>
         </div>
@@ -86,7 +86,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
             <div class="icon"><i class="bx bx-tachometer"></i></div>
-            <h4><a href="">السنة الدراسية الثالثة</a></h4>
+            <h4><a href="{{url('ThrdYear')}}">السنة الدراسية الثالثة</a></h4>
             <p>لا بد انك تبحث عن البرمجة في لغة جافا ، وبعض المواد المشتركة</p>
             </div>
         </div>
@@ -94,7 +94,7 @@
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4  mt-lg-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
             <div class="icon"><i class="bx bx-world"></i></div>
-            <h4><a href="">السنة الدراسية الرابعة</a></h4>
+            <h4><a href="{{url('FrthYear')}}">السنة الدراسية الرابعة</a></h4>
             <p>لا بد انك تبحث عن بعض المصادر المساعدة لمشروع التخرج وبعض الدورات التعليمية بالاضافة لآخر المواد الدراسية في الخطة! </p>
             </div>
         </div>
