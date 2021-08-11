@@ -51,13 +51,8 @@
     <div class="container">
             <div class="row">
                 <div class="col-lg-6 ">
-<<<<<<< HEAD
-                    {{-- <div class="career-search mb-60">
-                        <div class="filter-result">
-=======
                     <!-- <div class="career-search mb-60"> -->
                         <!-- <div class="filter-result"> -->
->>>>>>> a95437b85ea47670d66a112cb8e81cdbc7dd7b0f
                             <!-- <p class="mb-30 ff-montserrat">Total Job Openings : 89</p> -->
                         <!-- @foreach ($details as $d)
 
@@ -84,9 +79,7 @@
 
 
                         </div>
-                    </div> --}}
-
-                    
+                    </div>
 
 
                 </div>

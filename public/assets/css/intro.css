@@ -1,0 +1,318 @@
+/****intro-area****/
+.intro-area {
+    padding: 45px 0 16px;
+    border-bottom: 1px solid #e5f1fb;
+}
+
+.intro-area-2 {
+    -webkit-transform: translate(0, -49%);
+    transform: translate(0, -49%);
+}
+
+.intro-area-2 .intro-slider .owl-dot,
+.intro-area-2 .intro-slider .owl-nav {
+    display: none;
+}
+
+.intro-area-2 .single-intro-wrap {
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 30px 10px 25px;
+    margin: 0px 15px 30px;
+}
+
+.intro-area-2 .single-intro-wrap .thumb {
+    margin-bottom: 20px;
+}
+
+.intro-area-2 .single-intro-wrap .thumb img {
+    width: auto;
+    margin: auto;
+}
+
+.intro-area-2 .single-intro-wrap .wrap-details {
+    margin-left: 0;
+}
+
+.intro-area-2 .single-intro-wrap .wrap-details p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.single-intro-wrap {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-bottom: 30px;
+}
+
+.single-intro-wrap .thumb {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.single-intro-wrap .wrap-details {
+    margin-left: 21px;
+}
+
+.single-intro-wrap .wrap-details h6 {
+    font-weight: 500;
+}
+
+.single-intro-wrap .wrap-details p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.single-intro-wrap-2 {
+    margin-bottom: 30px;
+}
+
+.single-intro-wrap-2 .thumb {
+    margin-bottom: 20px;
+}
+
+.single-intro-wrap-2 .wrap-details h4 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+/***courses-area***/
+/**edl is theme prefix**/
+.edl-nav {
+    margin-bottom: 50px;
+}
+
+.edl-nav .nav-item:last-child .nav-link {
+    margin-right: 0;
+}
+
+.edl-nav .nav-item .nav-link {
+    background: #fbfcff;
+    border: 1px solid #e5f1fb;
+    border-radius: 6px;
+    height: 48px;
+    line-height: 46px;
+    padding: 0 30px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--paragraph-color);
+    margin-right: 10px;
+}
+
+.edl-nav .nav-item .nav-link.active {
+    background: #e5f1fb;
+    color: var(--main-color);
+}
+
+.single-course-wrap {
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.single-course-wrap:hover .thumb img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.single-course-wrap.media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.single-course-wrap.media .thumb {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-radius: 8px 0 0 8px;
+    background-size: cover;
+}
+
+.single-course-wrap.media .thumb img {
+    border-radius: 8px 0 0 8px;
+}
+
+.single-course-wrap.media .wrap-details {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border-left: 0;
+    border-radius: 0 8px 8px 0;
+    padding: 27px 30px 55px;
+    background: #fff;
+}
+
+.single-course-wrap.media .wrap-details .user-area {
+    border-bottom: 0;
+    padding-bottom: 19px;
+}
+
+.single-course-wrap .cat {
+    font-weight: 600;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 11px;
+}
+
+.single-course-wrap .cat.cat-blue {
+    background-color: var(--main-color);
+}
+
+.single-course-wrap .cat.cat-red {
+    background-color: #eb5757;
+}
+
+.single-course-wrap .cat.cat-green {
+    background-color: #27ae60;
+}
+
+.single-course-wrap .thumb {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.single-course-wrap .thumb img {
+    border-radius: 8px 8px 0 0;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    width: 100%;
+}
+
+.single-course-wrap .thumb .cat {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.single-course-wrap .wrap-details {
+    border: 1px solid #f2f2f2;
+    padding: 15px 20px 13px;
+    border-radius: 0 0 8px 8px;
+}
+
+.single-course-wrap .wrap-details h6 {
+    margin-bottom: 17px;
+}
+
+.single-course-wrap .wrap-details .user-area {
+    font-size: 14px;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.single-course-wrap .wrap-details .user-area .user-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.single-course-wrap .wrap-details .user-area .user-details img {
+    width: auto;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.single-course-wrap .wrap-details .user-area .user-details .meeting-id {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.single-course-wrap .wrap-details .user-area .user-details .meeting-id a {
+    color: var(--main-color);
+    margin-left: 5px;
+}
+
+.single-course-wrap .wrap-details .date-wrap,
+.single-course-wrap .wrap-details .price-wrap {
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.single-course-wrap .wrap-details .date-wrap .price,
+.single-course-wrap .wrap-details .price-wrap .price {
+    color: #0071dc;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.single-course-wrap .wrap-details .date-wrap .time,
+.single-course-wrap .wrap-details .price-wrap .time {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.progress-item-2 span,
+.progress-item span {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.progress-item-2 span span,
+.progress-item span span {
+    color: var(--heading-color);
+}
+
+.progress-item-2 .progress-bg,
+.progress-item .progress-bg {
+    background: #f2f2f2;
+    height: 11px;
+    border-radius: 30px;
+    margin-top: 12px;
+    position: relative;
+}
+
+.progress-item-2 .progress-rate,
+.progress-item .progress-rate {
+    background: var(--main-color);
+    height: 100%;
+    border-radius: 30px;
+}
+
+.progress-item-2 .progress-count-wrap,
+.progress-item .progress-count-wrap {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    position: absolute;
+    right: 0;
+    bottom: -31px;
+}
+
+
+@media all and (max-width: 1440px) {
+     .intro-area-2 .single-intro-wrap .thumb {
+         width: auto;
+     }
+
+}
+
+@media all and (max-width: 991px) {
+
+      .intro-area-2 {
+          margin-bottom: -37px;
+      }
+}
