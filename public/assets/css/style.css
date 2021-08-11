@@ -476,8 +476,10 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   top: 0;
   left: 0;
-  right: 0;
-     opacity: .4;
+  right: 0; 
+
+  opacity: .5;
+
      /* background: #343a40;
     */
 }
@@ -1905,3 +1907,87 @@ h1 {
     box-shadow: 0 3px 0 0 deeppink;
 }
 
+<<<<<<< HEAD
+=======
+/************ dmne-tab-inner ************/
+
+.dmne-tab-inner {
+    background: #fff;
+    padding: 18px 20px 18px 10px;
+    border-radius: 8px;
+    /* margin-bottom: 50px; */
+        margin-top: 2rem;
+}
+
+.dmne-tab-inner ul {
+    border: 0 !important;
+    display: inline-block;
+}
+
+.dmne-tab-inner ul li {
+    margin: 0 13px;
+    display: inline-block;
+}
+
+.dmne-tab-inner ul li a {
+    border: 0 !important;
+    padding: 0;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dmne-tab-inner ul li a.active {
+    color: var(--main-color) !important;
+}
+.dmne-tab-inner ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    height: 3px;
+    width: 0;
+    background: var(--main-color);
+    transition: 0.4s;
+}
+
+.dmne-tab-inner ul li a.active {
+    color: var(--main-color) !important;
+}
+
+.dmne-tab-inner ul li a.active:after {
+    width: 100%;
+}
+
+.dmne-tab-inner.style-two {
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.dmne-tab-inner.style-two ul {
+    border-bottom: 1px solid #e5e5e5 !important;
+    display: block;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.dmne-tab-inner.style-two ul li {
+    margin: 0;
+    margin-right: 100px;
+}
+
+.dmne-tab-inner.style-two ul li a:after {
+    display: none;
+}
+
+.dmne-tab-inner ul li a:hover {
+    color: var(--main-color);
+}
+@media (max-width: 1199px) {
+  .dmne-tab-inner ul li a {
+
+    font-size: 16px;
+  }
+}
+
+>>>>>>> 115fb21081f96aee276b48160231038625a9035d
