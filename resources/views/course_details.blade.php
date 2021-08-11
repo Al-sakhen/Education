@@ -41,7 +41,7 @@
 
 
 
-                <div class="col-lg-3 mix testBank all">
+                <div class="col-lg-3    col-md-4 mix testBank all">
                     <div class="materials">
                         <a href="" class="card education">
                         <div class="circle">
@@ -53,7 +53,7 @@
                 </div>
 
 
-                <div class="col-lg-3 mix tests all">
+                <div class="col-lg-3   col-md-4 mix tests all">
                     <div class="materials">
                         <a href="" class="card education">
                         <div class="circle">
@@ -65,7 +65,7 @@
                 </div>
 
 
-                <div class="col-lg-3 mix tests all">
+                <div class="col-lg-3  col-md-4 mix tests all">
                     <div class="materials">
                         <a href="" class="card education">
                         <div class="circle">
@@ -80,7 +80,7 @@
 
 
 
-            <div class="col-lg-3 mix testBank all">
+            <div class="col-lg-3 col-md-4 mix testBank all">
                     <div class="materials">
                         <a href="" class="card education">
                         <div class="circle">
