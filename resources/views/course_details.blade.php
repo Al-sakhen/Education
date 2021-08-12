@@ -18,41 +18,86 @@
     </div>
     </section><!-- Breadcrumbs Section -->
 
-    <div class="dmne-tab-inner text-center">
-                <ul class="nav nav-tabs" id="ex1" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="ex1-tab-1" data-toggle="pill" href="#ex1-tabs-1" role="tab" aria-controls="pills-1" aria-selected="false">All Categories </a>
+    <div class="container">
+    <div class="mix category-a" data-order="1"></div>
+    <div class="mix category-b" data-order="2"></div>
+    <div class="mix category-b category-c" data-order="3"></div>
+    <div class="mix category-a category-d" data-order="4"></div>
+</div>
+
+
+    <!-- <div class="dmne-tab-inner text-center">
+                <ul class="nav nav-tabs " id="ex1" role="tablist">
+                    <li class="nav-item " data-filter="all" role="presentation">
+                        <a class="nav-link" id="ex1-tab-1" >All Categories </a>
+                    </li>
+                    <li class="nav-item"  role="presentation">
+                        <a class="nav-link" >Animation</a>
+                    </li>
+                    <li class="nav-item" data-filter=".category-a" role="presentation">
+                        <a class="nav-link" id="ex1-tab-3" >Design</a>
+                    </li>
+                    <li class="nav-item" data-filter=".category-b" role="presentation">
+                        <a class="nav-link" id="ex1-tab-4" >Illustration</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="ex1-tab-2" data-toggle="pill" href="#ex1-tabs-2" role="tab" aria-controls="pills-2" aria-selected="false">Animation</a>
+                        <a class="nav-link"  data-filter=".category-c" id="ex1-tab-5" >Lifestyle</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="ex1-tab-3" data-toggle="pill" href="#ex1-tabs-3" role="tab" aria-controls="pills-3" aria-selected="false">Design</a>
+                    <li class="nav-item" data-filter=".category-c" role="presentation">
+                        <a class="nav-link" id="ex1-tab-6" >Lifestyle</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="ex1-tab-4" data-toggle="pill" href="#ex1-tabs-4" role="tab" aria-controls="pills-4" aria-selected="false">Illustration</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="ex1-tab-5" data-toggle="pill" href="#ex1-tabs-5" role="tab" aria-controls="pills-5" aria-selected="false">Lifestyle</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="ex1-tab-6" data-toggle="pill" href="#ex1-tabs-6" role="tab" aria-controls="pills-6" aria-selected="false">Lifestyle</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="ex1-tab-7" data-toggle="pill" href="#ex1-tabs-7" role="tab" aria-controls="pills-7" aria-selected="true">Business</a>
+                    <li class="nav-item" data-filter=".category-b" role="presentation">
+                        <a class="nav-link active" id="ex1-tab-7">Business</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 59a0e345ed3c4cab39aa4e76ad235ee0d0dbed7f
 
     <!-- ======= Portfolio Details Section ======= -->
 <section class="desc">
+
+      <div class="col-lg-12">
+
+
+
+
+
+              <div class="box-menu">
+                <ul class="">
+                  <li class="mixitup-control-active" data-filter=".all">All</li>
+                  <li data-filter=".web">Web Design</li>
+                  <li data-filter=".webDev">Web Developer</li>
+                  <li data-filter=".webDev">Courses</li>
+                  <li data-filter=".webDev">Courses</li>
+                  <li data-filter=".webDev">Courses</li>
+                  <li data-filter=".webDev">Courses</li>
+                  <li data-filter=".webDev">Courses</li>
+
+                  </ul>
+                </div>
+              </div>
+
+
     <div class="container">
+
             <div class="row">
                 <div class="col-lg-6 ">
+<<<<<<< HEAD
                     <!-- <div class="career-search mb-60"> -->
                         <!-- <div class="filter-result"> -->
+=======
+
+              
+
+                    <!-- <div class="career-search mb-60"> -->
+                        <!-- <div class="filter-result"> -->
+
+>>>>>>> 59a0e345ed3c4cab39aa4e76ad235ee0d0dbed7f
                             <!-- <p class="mb-30 ff-montserrat">Total Job Openings : 89</p> -->
                         <!-- @foreach ($details as $d)
 
@@ -79,7 +124,10 @@
 
 
                         </div>
-                    </div> --}}
+
+                    </div>
+
+                    
 
 
 
@@ -87,36 +135,12 @@
                 </div>
                 <div class="col-lg-6">
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLCInYL3l2AajFAiw4s1U4QbGszcQ-rAb3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
                 </div>
             </div>
         </div>
+
 </section>
-
-    </section>
-
-    <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4">
-                                                    <div class="frame">
-	            <div class="center">
-		<div class="title">
-			<h1>C++ Book</h1>
-		</div>
-
-		<div class="dropzone">
-			<!-- <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" /> -->
-            <i class="fas fa-cloud-download-alt upload-icon upload-input"></i>
-			<!-- <input type="file" class="upload-input" /> -->
-		</div>
-
-		<button type="button" class="btn" name="uploadbutton">Download file</button>
-
-	</div>
-</div>
-
-                        </div>
-                    </div>
-    </div>
 </main>
 <!-- End #main -->
 
