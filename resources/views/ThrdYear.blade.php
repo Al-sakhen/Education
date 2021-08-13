@@ -2,7 +2,7 @@
 @include('header')
 <!-- End Header -->
 
-<main id="main" data-aos="fade-up" >
+<main id="main" data-aos="fade-up" class="flex-column min-vh-100" >
 
 <!-- ======= Breadcrumbs ======= -->
 <section class="breadcrumbs">

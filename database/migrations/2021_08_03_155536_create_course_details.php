@@ -18,9 +18,8 @@ class CreateCourseDetails extends Migration
         Schema::create('course_details', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->enum('type' , ['link' , 'file']);
             $table->string('file_path');
-            $table->string('link_text');
+            $table->string('type');
             $table->unsignedBigInteger('course_id');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
             $table->timestamps();

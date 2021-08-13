@@ -33,7 +33,6 @@
                     <th>Name</th>
                     <th>Type</th>
                     <th>File</th>
-                    <th>Link</th>
                     <th>Course_id</th>
                     <th>Created at</th>
                     <th>Updated at</th>
@@ -48,7 +47,6 @@
                     <td>{{$c->name}}</td>
                     <td>{{$c->type}}</td>
                     <td>{{$c->file_path}}</td>
-                    <td>{{$c->link_text}}</td>
                     <td>{{$c->course_id}}</td>
                     <td>{{$c->created_at}}</td>
                     <td>{{$c->updated_at}}</td>

@@ -9,7 +9,7 @@
                 <div class="card card-primary ">
 
                     <div class="card-header">
-                        <h3 class="card-title">Add new course</h3>
+                        <h3 class="card-title">Add new material</h3>
                     </div>
                 <form action="{{url('dashboard/material/postupdate')}}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -34,29 +34,24 @@
                             <label for="inputName">Title</label>
                             <input type="text" name="name" id="inputName" value="{{$d->name}}" class="form-control">
                         </div>
-                        <label for="flexRadioDefault">Type</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="type" value="{{$d->type}}" id="flexRadioDefault">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                            link
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="type" value="{{$d->type}}" id="flexRadioDefault" >
-                            <label class="form-check-label" for="flexRadioDefault2">
-                            file
-                            </label>
-                        </div>
+
                         <div class="form-group">
                             <label for="inputProjectLeader">File</label>
                             <input type="file" name="file_path" value="{{asset('files/'.$d->file_path)}}" id="inputProjectLeader" class="form-control">
-                        </div> <div class="form-group">
-                            <label for="inputName">Link</label>
-                            <input type="text" name="link_text" value="{{$d->link_text}}" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputStatus">Type</label>
+                            <select id="inputStatus" name="type"  class="form-control custom-select">
+                                <option>materials</option>
+                                <option>resources</option>
+                                <option>testBank</option>
+                                <option>books</option>
+                            </select>
                         </div>
 
                         <div class="">
                             <input type="submit" value="Update" class="btn btn-success float-left">
+                            <a href="{{url('dashboard/course/details/'.$d->course_id)}}" class="btn btn-secondary float-right">Show Materials</a>
                             {{-- <a href="#" class="btn btn-secondary float-right">Show Courses</a> --}}
                         </div>
                         <input type="hidden" name="course_id" value="{{$d->course_id}}">

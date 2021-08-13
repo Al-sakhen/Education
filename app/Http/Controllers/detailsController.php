@@ -42,7 +42,7 @@ class detailsController extends Controller
         $value=$request->validate([
             'name'=>'required',
             'type'=>'required',
-            'link_text'=>'',
+            'type'=>'required',
             'file_path'=>'mimes:pdf,doc,docx,ppt,pptx,txt,xls,xlsx',
             'course_id'=>'required',
         ]);
@@ -57,8 +57,6 @@ class detailsController extends Controller
 
         $details->name = $request->name;
         $details->type = $request->type;
-        $details->link_text = $request->link_text;
-
         $details->course_id = $request->course_id;
         $details->save();
         if($details){
@@ -75,7 +73,7 @@ class detailsController extends Controller
         $data->delete();
 
         if($data){
-            alert()->question('Title','Lorem Lorem Lorem');
+            alert()->error('Delete','Material deleted successfully');
         }
 
         return redirect()->back();
@@ -99,14 +97,14 @@ class detailsController extends Controller
         $request->validate([
             'name'=>'required',
             'type'=>'required',
-            'link_text'=>'',
+
             'file_path'=>'mimes:pdf,doc,docx,ppt,pptx,txt,xls,xlsx',
             'course_id'=>'required',
         ]);
         $data= Course_details::find($request->id);
+
         $data->name = $request->name;
         $data->type = $request->type;
-        $data->link_text = $request->link_text;
 
         if($request->file_path != null){
 
@@ -118,6 +116,10 @@ class detailsController extends Controller
 
         $data->course_id = $request->course_id;
         $data->save();
+        if($data){
+            Alert::toast('Updated Successfully', 'Toast Type');
+
+        }
 
         return redirect()->back();
     }

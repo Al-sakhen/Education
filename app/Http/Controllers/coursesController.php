@@ -72,7 +72,7 @@ class coursesController extends Controller
         $data->delete();
 
         if($data){
-            alert()->question('Title','Lorem Lorem Lorem');
+            alert()->error('Delete','Course deleted successfully');
         }
 
         return redirect()->back();

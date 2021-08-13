@@ -15,7 +15,6 @@ class Course_details extends Model
         'name',
         'type',
         'file_path',
-        'link_text',
         'course_id',
         "created_at",
         "updated_at",
